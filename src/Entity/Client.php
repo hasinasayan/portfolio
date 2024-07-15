@@ -26,6 +26,9 @@ class Client
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $sujet = null;
 
+    #[ORM\Column(length: 255)]
+    private ?\DateTime $date = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,17 @@ class Client
     public function setSujet(?string $sujet): static
     {
         $this->sujet = $sujet;
+
+        return $this;
+    }
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(?\DateTime $date): static
+    {
+        $this->date = $date;
 
         return $this;
     }

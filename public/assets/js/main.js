@@ -234,12 +234,30 @@
   new PureCounter();
 
   jQuery(document).ready(function (){
-    var currentURL = window.location.href;
-    var url = new URL(currentURL);
-    var params = new URLSearchParams(url.search);
-    if(params.has('status')){
-      jQuery('.toast').toast('show')
-    }
-  })
+      jQuery('form').submit(function (e){
+        e.preventDefault();
+        var frm = document.getElementById('form');
+        jQuery.ajax({
+          method: 'POST',
+          type: 'POST',
+          url: '/' ,
+          dataType: 'json',
+          data: jQuery(this).serialize(),
+          success: function (response){
+            if (response.success){
+              // alert("Error: " + response.message);
+              jQuery('.toast.ok-send').toast('show');
+            }else {
+               // alert("Error: " + response.message);
+              jQuery('.toast.not-send').toast('show');
+            }
+            frm.reset();
+          },
+          error: function (){
+
+          }
+        })
+      })
+    })
 
 })()

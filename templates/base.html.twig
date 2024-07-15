@@ -56,12 +56,6 @@
 <main id="main">
     <!-- ======= About Section ======= -->
     <section id="about" class="about-mf sect-pt4 route">
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: green;width: fit-content;margin-top: 40px;margin-bottom: 25px;">
-            <div class="toast-body" style="font-size: 20px;">
-                <i class="bi bi-bell" style="font-size: 25px;color: green;"></i>
-                Your message has been sent. Thank you!
-            </div>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -438,6 +432,18 @@
                 <div class="col-sm-12">
                     <div class="contact-mf">
                         <div id="contact" class="box-shadow-full">
+                            <div class="toast ok-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: green;width: fit-content;margin:auto auto 50px auto; ">
+                                <div class="toast-body" style="font-size: 20px;">
+                                    <i class="bi bi-bell" style="font-size: 25px;color: green;"></i>
+                                    Your message has been sent. Thank you!
+                                </div>
+                            </div>
+                            <div class="toast not-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: red;width: fit-content;margin:auto auto 50px auto;">
+                                <div class="toast-body" style="font-size: 20px;">
+                                    <i class="bi bi-bell" style="font-size: 25px;color: red;"></i>
+                                    Your message can't be send, please try again!
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="title-box-2">
@@ -446,7 +452,7 @@
                                         </h5>
                                     </div>
                                     <div>
-                                        {{ form_start(contactform) }}
+                                        {{ form_start(contactform,{'attr': {'id' : 'form'}}) }}
                                             <div class="row">
                                                 <div class="col-md-12 mb-3">
                                                     <div class="form-group">
@@ -497,7 +503,6 @@
                                     <div class="socials">
                                         <ul>
                                             <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                                            <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
                                             <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
                                         </ul>
                                     </div>
