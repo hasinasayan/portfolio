@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Web developper | Hasina Ravonimbola</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>Web Developper | Hasina Ravonimbola</title>
+    <meta content="Hasina RAVONIMBOLA-Web developper:PHP,WordPress,Symfony,Drupal,Webmaster. Ecouter et donner une solution au demande du client" name="description">
+    <meta content="Hasina RAVONIMBOLA,Web developper,PHP,WordPress,Symfony,Drupal, Webmaster" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/Web-developper-Hasina-Ravonimbola-favicon-16x16.png') }}" sizes="16x16" rel="icon">
+    <link href="{{ asset('assets/img/Web-developper-Hasina-Ravonimbola-favicon-32x32.png') }}" sizes="32x32" rel="icon">
+    <link href="{{ asset('assets/img/Web-developper-Hasina-Ravonimbola-apple-touch-icon.png') }}" sizes="180x180" rel="apple-touch-icon">
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -20,14 +21,6 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: DevFolio
-    * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-    * Updated: Mar 17 2024 with Bootstrap v5.3.3
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
 
 <body>
@@ -65,37 +58,21 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5">
                                         <div class="about-img">
-                                            <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                                            <img src="{{ asset('assets/img/Hasina-ravonimbola-web-developper.jpg') }}" class="img-fluid rounded b-shadow-a" alt="Hasina-ravonimbola-web-developper-porftolio" title="Hasina-ravonimbola-web-developper">
                                         </div>
                                     </div>
                                     <div class="col-sm-6 col-md-7">
                                         <div class="about-info">
-                                            <p><span class="title-s">Name: </span> <span>Morgan Freeman</span></p>
-                                            <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                                            <p><span class="title-s">Email: </span> <span>contact@example.com</span></p>
-                                            <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                                            <p><span class="title-s">Name: </span> <span>Hasina RAVONIMBOLA</span></p>
+                                            <p><span class="title-s">Profile: </span> <span>Web Developer</span></p>
+                                            <p><span class="title-s">Email: </span> <span>contact@hasina-ravonimbola.com</span></p>
+                                            <p><span class="title-s">Phone: </span> <span>+261 34 64 888 73</span></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="skill-mf">
-                                    <p class="title-s">Skill</p>
-                                    <span>HTML</span> <span class="pull-right">85%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>CSS3</span> <span class="pull-right">75%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>PHP</span> <span class="pull-right">50%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
+                                {% block skills %}
+                                    {% include 'skills.html.twig' %}
+                                {% endblock%}
                             </div>
                             <div class="col-md-6">
                                 <div class="about-me pt-4 pt-md-0">
@@ -105,20 +82,18 @@
                                         </h5>
                                     </div>
                                     <p class="lead">
-                                        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                                        imperdiet et, porttitor
-                                        at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                                        porttitor accumsan tincidunt.
+                                        As a web developer with 6 years experience, my watchwords have always
+                                        been rigour and adaptation to achieve project objectives.</p>
+                                    <p class="lead">
+                                        Team management and technical design are skills I've acquired through my
+                                        experience on a number of projects.
                                     </p>
                                     <p class="lead">
-                                        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                                        porttitor volutpat. Vestibulum
-                                        ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                                    </p>
-                                    <p class="lead">
-                                        Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                                        Nulla porttitor accumsan
-                                        tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                        Tools : Git</br>
+                                        Environnement : Windows, Docker </br>
+                                        Methode : Agile </br>
+
+
                                     </p>
                                 </div>
                             </div>
@@ -131,421 +106,28 @@
 
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                            Services
-                        </h3>
-                        <p class="subtitle-a">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="service-ico">
-                            <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-                        </div>
-                        <div class="service-content">
-                            <h2 class="s-title">Web Design</h2>
-                            <p class="s-description text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                                provident vitae! Magni
-                                tempora perferendis eum non provident.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="service-ico">
-                            <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
-                        </div>
-                        <div class="service-content">
-                            <h2 class="s-title">Web Development</h2>
-                            <p class="s-description text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                                provident vitae! Magni
-                                tempora perferendis eum non provident.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="service-ico">
-                            <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
-                        </div>
-                        <div class="service-content">
-                            <h2 class="s-title">Responsive Design</h2>
-                            <p class="s-description text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                                provident vitae! Magni
-                                tempora perferendis eum non provident.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="service-box">
-                        <div class="service-ico">
-                            <span class="ico-circle"><i class="bi bi-tools"></i></span>
-                        </div>
-                        <div class="service-content">
-                            <h2 class="s-title">Webmastering</h2>
-                            <p class="s-description text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                                provident vitae! Magni
-                                tempora perferendis eum non provident.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="service-ico">
-                            <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-                        </div>
-                        <div class="service-content">
-                            <h2 class="s-title">Marketing Digital Services</h2>
-                            <p class="s-description text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                                provident vitae! Magni
-                                tempora perferendis eum non provident.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Services Section -->
+    {% block services %}
+        {% include 'services.html.twig' %}
+    {% endblock %}
 
     <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url({{ asset('assets/img/counters-bg.jpg') }})">
-        <div class="overlay-mf"></div>
-        <div class="container position-relative">
-            <div class="row">
-                <div class="col-sm-3 col-lg-6">
-                    <div class="counter-box counter-box pt-4 pt-md-0">
-                        <div class="counter-ico">
-                            <span class="ico-circle"><i class="bi bi-check"></i></span>
-                        </div>
-                        <div class="counter-num">
-                            <p data-purecounter-start="0" data-purecounter-end="450" data-purecounter-duration="1" class="counter purecounter"></p>
-                            <span class="counter-text">WORKS COMPLETED</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-lg-6">
-                    <div class="counter-box pt-4 pt-md-0">
-                        <div class="counter-ico">
-                            <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-                        </div>
-                        <div class="counter-num">
-                            <p data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="counter purecounter"></p>
-                            <span class="counter-text">YEARS OF EXPERIENCE</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Counter Section -->
+    {% block counter %}
+        {% include 'counter.html.twig' %}
+    {% endblock %}
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                            Portfolio
-                        </h3>
-                        <p class="subtitle-a">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-2.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-3.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-4.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-5.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="work-box">
-                        <a href="assets/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                            <div class="work-img">
-                                <img src="assets/img/work-6.jpg" alt="" class="img-fluid">
-                            </div>
-                        </a>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section><!-- End Portfolio Section -->
+    {% block portfolio %}
+        {% include 'potfolio.html.twig' %}
+    {% endblock %}
 
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({{ asset('assets/img/overlay-bg.jpg') }})">
-        <div class="overlay-mf"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="contact-mf">
-                        <div id="contact" class="box-shadow-full">
-                            <div class="toast ok-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: green;width: fit-content;margin:auto auto 50px auto; ">
-                                <div class="toast-body" style="font-size: 20px;">
-                                    <i class="bi bi-bell" style="font-size: 25px;color: green;"></i>
-                                    Your message has been sent. Thank you!
-                                </div>
-                            </div>
-                            <div class="toast not-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: red;width: fit-content;margin:auto auto 50px auto;">
-                                <div class="toast-body" style="font-size: 20px;">
-                                    <i class="bi bi-bell" style="font-size: 25px;color: red;"></i>
-                                    Your message can't be send, please try again!
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="title-box-2">
-                                        <h5 class="title-left">
-                                            Send Message Us
-                                        </h5>
-                                    </div>
-                                    <div>
-                                        {{ form_start(contactform,{'attr': {'id' : 'form'}}) }}
-                                            <div class="row">
-                                                <div class="col-md-12 mb-3">
-                                                    <div class="form-group">
-                                                        {{ form_widget(contactform.nom) }}
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 mb-3">
-                                                    <div class="form-group">
-                                                        {{ form_widget(contactform.email) }}
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 mb-3">
-                                                    <div class="form-group">
-                                                        {{ form_widget(contactform.sujet) }}
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        {{ form_widget(contactform.message) }}
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 text-center mt-2">
-                                                    {{ form_row(contactform.save) }}
-                                                </div>
-                                            </div>
-                                        {{ form_end(contactform) }}
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="title-box-2 pt-4 pt-md-0">
-                                        <h5 class="title-left">
-                                            Get in Touch
-                                        </h5>
-                                    </div>
-                                    <div class="more-info">
-                                        <p class="lead">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                                            expedita aperiam aliquid at.
-                                            Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                                            mollitia inventore?
-                                        </p>
-                                        <ul class="list-ico">
-                                            <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                            <li><span class="bi bi-phone"></span> (617) 557-0089</li>
-                                            <li><span class="bi bi-envelope"></span> contact@example.com</li>
-                                        </ul>
-                                    </div>
-                                    <div class="socials">
-                                        <ul>
-                                            <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                                            <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Contact Section -->
+    {% block contact %}
+        {% include 'contact.html.twig' %}
+    {% endblock %}
 
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="copyright-box">
-                    <p class="copyright">&copy; Copyright <strong>Hasina Ravonimbola</strong>. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer><!-- End  Footer -->
-
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/typed.js/typed.umd.js') }}"></script>
-<script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-<script src="{{ asset('assets/vendor/bootstrap/js/jquery.min.js') }}" type="text/javascript"></script>
-
-
-<!-- Template Main JS File -->
-<script src="{{ asset('assets/js/main.js') }}"></script>
-
-</body>
-
-</html>
+{% block footer %}
+{% include 'footer.html.twig' %}
+{% endblock %}

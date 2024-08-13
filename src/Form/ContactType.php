@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use VictorPrdh\RecaptchaBundle\Form\ReCaptchaType;
 
 class ContactType extends AbstractType
 {
@@ -36,8 +37,9 @@ class ContactType extends AbstractType
                     'placeholder' => 'Message',
                     'class' => 'form-control'],
             ])
+            ->add('captcha', ReCaptchaType::class)
             ->add('save', SubmitType::class, [
-                'label' => 'Envoyer',
+                'label' => 'Send',
                 'attr' => ['class' => 'button button-a button-big button-rouded']
                 ])
         ;

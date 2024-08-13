@@ -1,0 +1,91 @@
+{# templates/contact.html.twig #}
+<section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({{ asset('assets/img/overlay-bg.jpg') }})">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-mf">
+                    <div id="contact" class="box-shadow-full">
+                        <div class="toast ok-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: green;width: fit-content;margin:auto auto 50px auto; ">
+                            <div class="toast-body" style="font-size: 20px;">
+                                <i class="bi bi-bell" style="font-size: 25px;color: green;"></i>
+                                Your message has been sent. Thank you!
+                            </div>
+                        </div>
+                        <div class="toast not-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: red;width: fit-content;margin:auto auto 50px auto;">
+                            <div class="toast-body" style="font-size: 20px;">
+                                <i class="bi bi-bell" style="font-size: 25px;color: red;"></i>
+                                Your message can't be send, please try again!
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        Send Me a Message
+                                    </h5>
+                                </div>
+                                <div>
+                                    {{ form_start(contactform,{'attr': {'id' : 'form'}}) }}
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                {{ form_widget(contactform.nom) }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                {{ form_widget(contactform.email) }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                {{ form_widget(contactform.sujet) }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                {{ form_widget(contactform.message) }}
+                                            </div>
+                                        </div>
+                                        {{ form_row(contactform.captcha)}}
+                                        {{ form_errors(contactform.captcha) }}
+                                        <div class="col-md-12 text-center mt-2">
+                                            {{ form_row(contactform.save) }}
+                                        </div>
+                                    </div>
+                                    {{ form_end(contactform) }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="title-box-2 pt-4 pt-md-0">
+                                    <h5 class="title-left">
+                                        Get in Touch
+                                    </h5>
+                                </div>
+                                <div class="more-info">
+                                    <p class="lead">
+                                        Feel free to contact me if you have any question or some requests about your project,
+                                        I'll be happy to get back to you as soon as possible.
+
+                                    </p>
+                                    <ul class="list-ico">
+                                        <li><span class="bi bi-geo-alt"></span> Antananarivo, Madagascar</li>
+                                        <li><span class="bi bi-phone"></span> +261 34 64 888 73</li>
+                                        <li><span class="bi bi-envelope"></span> contact@hasina-ravonimbola.com </li>
+                                    </ul>
+                                </div>
+                                <div class="socials">
+                                    <ul>
+                                        {#                                            <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>#}
+                                        <li><a href="https://www.linkedin.com/in/hasina-ravonimbola/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Contact Section -->
