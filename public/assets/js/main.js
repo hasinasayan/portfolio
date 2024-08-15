@@ -248,7 +248,8 @@
               // alert("Error: " + response.message);
               jQuery('.toast.ok-send').toast('show');
             }else {
-               // alert("Error: " + response.message);
+                //alert("Error: " + response.message);
+              jQuery('.toast.not-send .toast-body').text(response.message);
               jQuery('.toast.not-send').toast('show');
             }
             frm.reset();

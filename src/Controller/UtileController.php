@@ -26,39 +26,43 @@ class UtileController extends AbstractController
         if ($request->isXmlHttpRequest() )
         {
             $data = $request->request->all()['contact'];
-
-            $client->setEmail($data['email']);
-            $client->setNom($data['nom']);
-            $client->setSujet($data['sujet'] );
-            $client->setMessage( $data['message']);
-            $client->setDate(new \DateTime('now',new \DateTimeZone('Europe/Moscow')));
-
-            $entityManager->persist($client);
-            $entityManager->flush();
-            try {
-                $mailContent = (new Email())
-                    ->from($data['email'])
-                    ->to('admin@mail.com')
-                    ->subject($data['sujet'])
-                    ->text($data['message']);
-                $mailer->send($mailContent);
-            }catch (\Exception $e){
-                $form->addError( new FormError($e->getMessage()));
-                $logger->error('error form:'. $form->getErrors() );
-            }
-            if (count($form->getErrors(true)) == 0)
-            {
-                return $this->json([
-                    'success' => true,
-                    'message' => 'Your message has been sent. Thank you!'
-                ]);
-            }else
-            {
+            if(empty($request->request->get('g-recaptcha-response') )){
                 return $this->json([
                     'success' => false,
-                    'message' => 'Your message can\'t be send, please try again!'
+                    'message' => 'The captcha is invalid. Please try again.'
                 ]);
+            }else {
+                $client->setEmail($data['email']);
+                $client->setNom($data['nom']);
+                $client->setSujet($data['sujet']);
+                $client->setMessage($data['message']);
+                $client->setDate(new \DateTime('now', new \DateTimeZone('Europe/Moscow')));
 
+                $entityManager->persist($client);
+                $entityManager->flush();
+                try {
+                    $mailContent = (new Email())
+                        ->from($data['email'])
+                        ->to('admin@mail.com')
+                        ->subject($data['sujet'])
+                        ->text($data['message']);
+                    $mailer->send($mailContent);
+                } catch (\Exception $e) {
+                    $form->addError(new FormError($e->getMessage()));
+                    $logger->error('error form:' . $form->getErrors());
+                }
+                if (count($form->getErrors(true)) == 0) {
+                    return $this->json([
+                        'success' => true,
+                        'message' => 'Your message has been sent. Thank you!'
+                    ]);
+                } else {
+                    return $this->json([
+                        'success' => false,
+                        'message' => 'Your message can\'t be send, please try again!'
+                    ]);
+
+                }
             }
 
         }
