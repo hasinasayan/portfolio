@@ -10,4 +10,5 @@ return [
     Symfony\Bundle\WebProfilerBundle\WebProfilerBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     VictorPrdh\RecaptchaBundle\RecaptchaBundle::class => ['all' => true],
+    CodeBuds\WebPConversionBundle\WebPConversionBundle::class => ['all' => true],
 ];

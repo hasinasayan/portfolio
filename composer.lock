@@ -4,8 +4,191 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bfe7f39674de49f0e7271f5b3e7b4f7",
+    "content-hash": "b047835950531ccba6a9a1f35fd8b92c",
     "packages": [
+        {
+            "name": "codebuds/webp-conversion-bundle",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codebuds33/webp-conversion-bundle.git",
+                "reference": "9eac58820bbf4a15b930b43039048aee91c3d7d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codebuds33/webp-conversion-bundle/zipball/9eac58820bbf4a15b930b43039048aee91c3d7d7",
+                "reference": "9eac58820bbf4a15b930b43039048aee91c3d7d7",
+                "shasum": ""
+            },
+            "require": {
+                "codebuds/webp-converter": "^0.6.0",
+                "doctrine/annotations": "^2.0",
+                "ext-fileinfo": "*",
+                "php": "^8.1",
+                "symfony/console": "^6.1",
+                "symfony/finder": "^6.1",
+                "symfony/http-foundation": "^6.1",
+                "symfony/mime": "^6.1",
+                "symfony/orm-pack": "^2.1",
+                "symfony/routing": "^6.1",
+                "symfony/stopwatch": "^6.1",
+                "symfony/validator": "^6.1",
+                "symfony/yaml": "^6.1",
+                "twig/twig": "^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "rector/rector": "^0.15.21",
+                "roave/security-advisories": "dev-latest",
+                "symfony/framework-bundle": "^6.1",
+                "symfony/phpunit-bridge": "^6.1"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CodeBuds\\WebPConversionBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dennis de Best",
+                    "email": "dennis@codebuds.com"
+                }
+            ],
+            "description": "A Symfony bundle to generate WebPImages",
+            "support": {
+                "issues": "https://github.com/codebuds33/webp-conversion-bundle/issues",
+                "source": "https://github.com/codebuds33/webp-conversion-bundle/tree/0.3.0"
+            },
+            "time": "2023-08-06T07:00:48+00:00"
+        },
+        {
+            "name": "codebuds/webp-converter",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codebuds33/webp-converter.git",
+                "reference": "712dee91a1b316130ea2ca553a90b9528f7a3048"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codebuds33/webp-converter/zipball/712dee91a1b316130ea2ca553a90b9528f7a3048",
+                "reference": "712dee91a1b316130ea2ca553a90b9528f7a3048",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": "^8.1",
+                "symfony/http-foundation": "^6.1"
+            },
+            "require-dev": {
+                "rector/rector": "^0.15.21",
+                "roave/security-advisories": "dev-latest",
+                "symfony/mime": "^6.1",
+                "symfony/phpunit-bridge": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeBuds\\WebPConverter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dennis de Best",
+                    "email": "dennis@codebuds.com"
+                }
+            ],
+            "description": "A service that uses php GD to convert Jpeg, Png, Gif and Bmp into WebP",
+            "support": {
+                "issues": "https://github.com/codebuds33/webp-converter/issues",
+                "source": "https://github.com/codebuds33/webp-converter/tree/0.6.0"
+            },
+            "time": "2023-08-05T12:07:58+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "e157ef3f3124bbf6fe7ce0ffd109e8a8ef284e7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e157ef3f3124bbf6fe7ce0ffd109e8a8ef284e7f",
+                "reference": "e157ef3f3124bbf6fe7ce0ffd109e8a8ef284e7f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^2 || ^3",
+                "ext-tokenizer": "*",
+                "php": "^7.2 || ^8.0",
+                "psr/cache": "^1 || ^2 || ^3"
+            },
+            "require-dev": {
+                "doctrine/cache": "^2.0",
+                "doctrine/coding-standard": "^10",
+                "phpstan/phpstan": "^1.8.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "symfony/cache": "^5.4 || ^6",
+                "vimeo/psalm": "^4.10"
+            },
+            "suggest": {
+                "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "https://www.doctrine-project.org/projects/annotations.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/annotations/issues",
+                "source": "https://github.com/doctrine/annotations/tree/2.0.1"
+            },
+            "time": "2023-02-02T22:02:53+00:00"
+        },
         {
             "name": "doctrine/cache",
             "version": "2.2.0",
@@ -3636,6 +3819,55 @@
                 }
             ],
             "time": "2023-08-08T10:16:24+00:00"
+        },
+        {
+            "name": "symfony/orm-pack",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/orm-pack.git",
+                "reference": "9d8729016b3a8b0db854c028d15c2dcf4d19b1b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/9d8729016b3a8b0db854c028d15c2dcf4d19b1b4",
+                "reference": "9d8729016b3a8b0db854c028d15c2dcf4d19b1b4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3",
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/doctrine-migrations-bundle": "*",
+                "doctrine/orm": "*"
+            },
+            "conflict": {
+                "php": "<8.1"
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for the Doctrine ORM",
+            "support": {
+                "issues": "https://github.com/symfony/orm-pack/issues",
+                "source": "https://github.com/symfony/orm-pack/tree/v2.4.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-13T17:58:44+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",

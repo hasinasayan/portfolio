@@ -58,7 +58,11 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5">
                                         <div class="about-img">
-                                            <img src="{{ asset('assets/img/Hasina-ravonimbola-web-developper.jpg') }}" class="img-fluid rounded b-shadow-a" alt="Hasina-ravonimbola-web-developper-porftolio" title="Hasina-ravonimbola-web-developper">
+                                            <picture>
+                                                <source srcset="{{ 'assets/img/Hasina-ravonimbola-web-developper_q90.webp'}}" type="image/webp">
+                                                <source srcset="assets/img/Hasina-ravonimbola-web-developper.jpg" type="image/jpeg">
+                                                <img src="assets/img/Hasina-ravonimbola-web-developper.jpg" class="img-fluid rounded b-shadow-a" alt="Hasina-ravonimbola-web-developper-porftolio" title="Hasina-ravonimbola-web-developper">
+                                            </picture>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 col-md-7">
