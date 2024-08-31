@@ -830,12 +830,19 @@ a:hover {
   padding-bottom: 4rem;
 }
 
+.img-fluid{
+  transform: rotate(270deg);
+}
+
 .about-mf .about-img {
   margin-bottom: 2rem;
 }
 
-.about-mf .about-img img {
-  margin-left: 10px;
+
+@media (max-width: 426px) {
+  .about-info{
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 767px) {
@@ -845,6 +852,9 @@ a:hover {
   }
 }
 
+.skill-mf{
+  margin-top: 25px;
+}
 .skill-mf span {
   color: #4e4e4e;
 }

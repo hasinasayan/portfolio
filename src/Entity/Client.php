@@ -81,7 +81,7 @@ class Client
 
         return $this;
     }
-    public function getDate(): ?string
+    public function getDate(): ?\DateTime
     {
         return $this->date;
     }
