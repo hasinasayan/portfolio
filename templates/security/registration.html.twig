@@ -1,0 +1,44 @@
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Sign up</h1>
+    <div>
+        {{ form_start(formRegistration) }}
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="form-group">
+                    {{ form_widget(formRegistration.username) }}
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="form-group">
+                    {{ form_widget(formRegistration.email) }}
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="form-group">
+                    {{ form_widget(formRegistration.password) }}
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="form-group">
+                    {{ form_widget(formRegistration.confirmPassword) }}
+                </div>
+            </div>
+            {{ form_widget(formRegistration.save) }}
+        </div>
+        {{ form_end(formRegistration) }}
+    </div>
+
+</div>
+{% endblock %}
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}

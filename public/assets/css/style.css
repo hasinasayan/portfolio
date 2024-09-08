@@ -830,7 +830,7 @@ a:hover {
   padding-bottom: 4rem;
 }
 
-.img-fluid{
+.about-img .img-fluid{
   transform: rotate(270deg);
 }
 
