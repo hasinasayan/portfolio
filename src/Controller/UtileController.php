@@ -23,7 +23,7 @@ class UtileController extends AbstractController
         $form = $this->createForm(ContactType::class, $client);
 
         $form->handleRequest($request);
-        if ($request->isXmlHttpRequest() )
+        if ( $form->isSubmitted() && $request->isXmlHttpRequest())
         {
             $data = $request->request->all()['contact'];
             if(empty($request->request->get('g-recaptcha-response') )){

@@ -4,9 +4,10 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User
+class User implements \Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -20,7 +21,10 @@ class User
     private ?string $username = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(min: 8)]
+    #[Assert\EqualTo(propertyPath: "confirmPassword")]
     private ?string $password = null;
+    #[Assert\EqualTo(propertyPath: "password")]
     public ?string $confirmPassword = null;
 
     public function getId(): ?int

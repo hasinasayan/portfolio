@@ -234,9 +234,9 @@
   new PureCounter();
 
   jQuery(document).ready(function (){
-      jQuery('form').submit(function (e){
+      jQuery('#formContact').submit(function (e){
         e.preventDefault();
-        var frm = document.getElementById('form');
+        var frm = document.getElementById('formContact');
         jQuery.ajax({
           method: 'POST',
           type: 'POST',
