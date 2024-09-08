@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
@@ -25,7 +26,7 @@ class SecurityController extends AbstractController
             $user->setPassword($hash);
             $manager->persist($user);
             $manager->flush();
-            return $this->redirectToRoute('app_utile');
+            return $this->redirectToRoute('login');
         }
         return $this->render('security/registration.html.twig',
         [
@@ -34,10 +35,15 @@ class SecurityController extends AbstractController
 
     }
     #[Route('/login', name: 'login')]
-    public function login()
+    public function login(AuthenticationUtils $authenticationUtils)
     {
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig');
+        return $this->render('security/login.html.twig',[
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ]);
 
     }
     #[Route('/logout', name: 'logout')]
