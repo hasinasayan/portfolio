@@ -1,0 +1,28 @@
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
+{% block body %}
+
+    <div class="example-wrapper">
+    <h1>Login</h1>
+        <form action="{{ path('login') }}" method="post">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input placeholder="Email" name="_username" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input placeholder="Password" name="_password" type="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+
+{% endblock %}
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}

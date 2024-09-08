@@ -4,10 +4,14 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User implements \Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface
+#[UniqueEntity(
+    fields: ['email'], message: 'There is already an account with this email')]
+class User implements UserInterface, \Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -21,10 +25,9 @@ class User implements \Symfony\Component\Security\Core\User\PasswordAuthenticate
     private ?string $username = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\Length(min: 8)]
-    #[Assert\EqualTo(propertyPath: "confirmPassword")]
+    #[Assert\Length(min: 8, exactMessage: 'Password must be at least 8 characters long.')]
     private ?string $password = null;
-    #[Assert\EqualTo(propertyPath: "password")]
+    #[Assert\EqualTo(propertyPath: "password" ,message: 'Passwords must be the same.')]
     public ?string $confirmPassword = null;
 
     public function getId(): ?int
@@ -66,5 +69,20 @@ class User implements \Symfony\Component\Security\Core\User\PasswordAuthenticate
         $this->password = $password;
 
         return $this;
+    }
+
+    public function getRoles(): array
+    {
+        return ['ROLE_ADMIN'];
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->email;
     }
 }

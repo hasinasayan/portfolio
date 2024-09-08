@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class SecurityController extends AbstractController
 {
-    #[Route('/signup', name: 'security_signup')]
+    #[Route('/signup', name: 'signup')]
     public function registration(Request $request, EntityManagerInterface $manager, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
@@ -32,5 +32,16 @@ class SecurityController extends AbstractController
             'formRegistration' => $formRegistration->createView()
         ]);
 
+    }
+    #[Route('/login', name: 'login')]
+    public function login()
+    {
+
+        return $this->render('security/login.html.twig');
+
+    }
+    #[Route('/logout', name: 'logout')]
+    public function logout()
+    {
     }
 }
