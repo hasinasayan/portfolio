@@ -13,6 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^2.15",
         "easycorp/easyadmin-bundle": "4.x-dev",
+        "friendsofsymfony/ckeditor-bundle": "^2.5",
         "symfony/asset": "6.4.*",
         "symfony/console": "6.4.*",
         "symfony/dotenv": "6.4.*",

@@ -1,0 +1,7 @@
+fos_ck_editor:
+  configs:
+    main_config:
+      versionCheck: false
+      toolbar: full
+
+
