@@ -1,230 +1,190 @@
 {# templates/portfolio.html.twig #}
-<!-- ======= Portfolio Section ======= -->
-<section id="work" class="portfolio-mf sect-pt4 route">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="title-box text-center">
-                    <h3 class="title-a">
-                        Portfolio
-                    </h3>
-                    <p class="subtitle-a">
-                        You can see my recent project
+<!-- Work Section -->
+<section class="max-w-7xl mx-auto px-8 mb-section-gap reveal" id="work">
+    <div class="flex justify-between items-end mb-12">
+        <h2 class="font-headline-lg text-headline-lg text-white flex items-center gap-4">
+            <span class="w-12 h-1 bg-sky-500"></span> PROJETS RÉCENTS
+        </h2>
+        <p class="text-slate-400 font-label-md hidden md:block">PROJETS SÉLECTIONNÉS</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1: Maison Gallieni -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-sky-500/20 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/Maison-Gallieni_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Maison Gallieni Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/Maison-Gallieni_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">PHP</span>
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Maison Gallieni</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Refonte complète du site vitrine et du système de réservation pour cet établissement de luxe à Antananarivo. Optimisation SEO et performance.
                     </p>
-                    <div class="line-mf"></div>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="#" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/Maison-Gallieni_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/Maison-Gallieni_q90.webp') }}" alt="web-developement-Hasina-ravonimbola" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">Maison Gallieni</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">August 2024</span></br>
-                                    <span class="w-25">WordPress Custom Theme - website technical redesign</span>
-                                    <p><span class="fw-bold">Work:</span> As a Freelance  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        <!-- Project 2: Yakatravelight -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/Yakatravelight_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Yakatravelight Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/Yakatravelight_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Yakatravelight</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Création complète d'un site WordPress avec thème custom pour une agence de voyage. Design moderne et responsive.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://yakatravelight.com" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/Yakatravelight_q90.webp') }}" target="_blank" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/Yakatravelight_q90.webp') }}" alt="web-developement-Hasina-ravonimbola" class="img-fluid" title="Hasina-ravonimbola-web-developper-portfolio">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">yakatravelight.com</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">Mai 2024</span></br>
-                                    <span>WordPress Custom Theme - Creating website</span>
-                                    <p><span class="fw-bold">Work:</span> As a Freelance  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://yakatravelight.com" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 3: McDo Recrutement -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/macdo_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="McDo Recrutement Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/macdo_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">API</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">McDo Recrutement</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Développement d'une plateforme de gestion des candidatures avec intégration API. Architecture robuste pour gérer un haut trafic.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://carrieres.mcdonalds.fr/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/macdo_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/macdo_q90.webp') }}" alt="web-developement-Hasina-ravonimbola" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">McDo Recrutement</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">August 2023</span></br>
-                                    <span>WordPress Custom Theme - Send API</span></br>
-                                    <p><span class="fw-bold">Work:</span> As a Bolzano dev  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://carrieres.mcdonalds.fr/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 4: Harpo Paris -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/harpo_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Harpo Paris Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/harpo_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">PRESTASHOP</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Harpo Paris</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Développement et webmastering d'une boutique e-commerce Prestashop 1.7 pour une marque de cosmétiques de luxe.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://www.harpo-paris.com/fr/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/harpo_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/harpo_q90.webp') }}" alt="web-developement-Hasina-ravonimbola" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">Harpo Paris.fr</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development- Webmastering</span></br>
-                                    <span>Prestashop 1.7</span></br>
-                                    <p><span class="fw-bold">Work:</span> As a Pulse.mg dev  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://www.harpo-paris.com/fr/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 5: First Immo -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/fimmo_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="First Immo Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/fimmo_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">First Immo</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Refonte complète du site web d'une agence immobilière avec thème WordPress personnalisé et optimisation UX.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://www.firstimmo.mg/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/fimmo_q90.webp')}}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/fimmo_q90.webp')}}" alt="Hasina-ravonimbola-web-developper" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">First Immo.mg</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">July 2022</span></br>
-                                    <span>WordPress Custom Theme - Website redesign</span></br>
-                                    <p><span class="fw-bold">Work</span>: As a Pulse.mg dev</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://www.firstimmo.mg/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 6: Madcameleon -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/madcam_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Madcameleon Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/madcam_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Madcameleon</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Refonte du site web avec thème WordPress personnalisé pour une agence de communication digitale.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://www.madcameleon.com/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/madcam_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/madcam_q90.webp') }}" alt="Hasina-ravonimbola-web-developper" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">Madcameleon.mg</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">January 2022</span></br>
-                                    <span>WordPress Custom Theme - Website redesign</span></br>
-                                    <p><span class="fw-bold">Work:</span> As a Pulse.mg dev  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://www.madcameleon.com/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 7: Fanvoice -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/fanvoice_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Fanvoice Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/fanvoice_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WORDPRESS</span>
                         </div>
                     </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Fanvoice</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Refonte complète du site web avec thème WordPress personnalisé pour une plateforme de marketing d'influence.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://www.fanvoice.com/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/fanvoice_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/fanvoice_q90.webp') }}" alt="Hasina-ravonimbola-web-developper" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">Fanvoice.com</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development</span> / <span class="w-date">November 2021</span></br>
-                                    <span>WordPress Custom Theme - Website redesign</span></br>
-                                    <p><span class="fw-bold">Work:</span> As a Pulse.mg dev  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://www.fanvoice.com/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
+        </div>
+        <!-- Project 8: Positive Performances -->
+        <div class="group relative">
+            <div class="card-cyber glass-card rounded-2xl overflow-hidden border-white/10 glow-border transition-all duration-500">
+                <a href="{{ asset('assets/img/pp_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Positive Performances Project" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="{{ asset('assets/img/pp_q90.webp') }}">
+                        <div class="absolute top-4 right-4 flex gap-2">
+                            <span class="px-3 py-1 bg-slate-900/80 backdrop-blur-md rounded-full text-sky-400 font-label-sm text-xs">WIX</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="{{ asset('assets/img/pp_q90.webp') }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                        <div class="work-img">
-                            <img src="{{ asset('assets/img/pp_q90.webp') }}" alt="Hasina-ravonimbola-web-developper" title="Hasina-ravonimbola-web-developper-portfolio" class="img-fluid">
-                        </div>
+                </a>
+                <div class="p-8">
+                    <h3 class="font-headline-md text-headline-md text-white mb-4">Positive Performances</h3>
+                    <p class="font-body-md text-body-md text-slate-400 mb-6">
+                        Développement et webmastering continu d'un site Wix pour une organisation de coaching et développement personnel.
+                    </p>
+                    <a class="flex items-center gap-2 text-sky-400 font-label-md hover:gap-4 transition-all" href="https://www.positiveperformances.org/" target="_blank">
+                        VOIR LE PROJET <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
-                    <div class="work-content">
-                        <div class="row">
-                            <div class="col-sm-10">
-                                <h2 class="w-title">Positive Performances.org</h2>
-                                <div class="w-more">
-                                    <span class="w-ctegory">Web Development - Webmastering</span> / <span class="w-date">Since august 2023</span></br>
-                                    <span>Wix</span></br>
-                                    <p><span class="fw-bold">Work:</span> As a Freelance  </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="w-like">
-                                    <a href="https://www.positiveperformances.org/" target="_blank"> <i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section><!-- End Portfolio Section -->

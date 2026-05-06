@@ -1,90 +1,68 @@
 {# templates/contact.html.twig #}
-<section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({{ asset('assets/img/overlay-bg_q90.webp') }})">
-    <div class="overlay-mf"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="contact-mf">
-                    <div id="contact" class="box-shadow-full">
-                        <div class="toast ok-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: green;width: fit-content;margin:auto auto 50px auto; ">
-                            <div class="toast-body" style="font-size: 20px;">
-                                <i class="bi bi-bell" style="font-size: 25px;color: green;"></i>
-                                Your message has been sent. Thank you!
-                            </div>
-                        </div>
-                        <div class="toast not-send" role="alert" aria-live="assertive" aria-atomic="true" style="border-color: red;width: fit-content;margin:auto auto 50px auto;">
-                            <div class="toast-body" style="font-size: 20px;">
-                                <i class="bi bi-bell" style="font-size: 25px;color: red;"></i>
-                                Your message can't be send, please try again!
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="title-box-2">
-                                    <h5 class="title-left">
-                                        Send Me a Message
-                                    </h5>
-                                </div>
-                                <div>
-                                    {{ form_start(contactform,{'attr': {'id' : 'formContact'}}) }}
-                                    <div class="row">
-                                        <div class="col-md-12 mb-3">
-                                            <div class="form-group">
-                                                {{ form_widget(contactform.nom) }}
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mb-3">
-                                            <div class="form-group">
-                                                {{ form_widget(contactform.email) }}
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mb-3">
-                                            <div class="form-group">
-                                                {{ form_widget(contactform.sujet) }}
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                {{ form_widget(contactform.message) }}
-                                            </div>
-                                        </div>
-                                        {{ form_row(contactform.captcha)}}
-                                        {{ form_errors(contactform.captcha) }}
-                                        <div class="col-md-12 text-center mt-2">
-                                            {{ form_row(contactform.save) }}
-                                        </div>
-                                    </div>
-                                    {{ form_end(contactform) }}
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="title-box-2 pt-4 pt-md-0">
-                                    <h5 class="title-left">
-                                        Get in Touch
-                                    </h5>
-                                </div>
-                                <div class="more-info">
-                                    <p class="lead">
-                                        Feel free to contact me if you have any question or some requests about your project,
-                                        I'll be happy to get back to you as soon as possible.
+<!-- Contact Section -->
+<section class="max-w-7xl mx-auto px-8 mb-section-gap reveal" id="contact">
+    <div class="glass-card rounded-3xl p-12 relative overflow-hidden border-sky-500/20">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 blur-[100px]"></div>
+        
+        <!-- Toast Messages -->
+        <div class="toast ok-send hidden relative z-10 mb-8 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400" role="alert">
+            <div class="flex items-center gap-3">
+                <i class="bi bi-bell text-2xl"></i>
+                <span class="font-body-md">Your message has been sent. Thank you!</span>
+            </div>
+        </div>
+        <div class="toast not-send hidden relative z-10 mb-8 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400" role="alert">
+            <div class="flex items-center gap-3">
+                <i class="bi bi-bell text-2xl"></i>
+                <span class="font-body-md">Your message can't be sent, please try again!</span>
+            </div>
+        </div>
 
-                                    </p>
-                                    <ul class="list-ico">
-                                        <li><span class="bi bi-geo-alt"></span> Antananarivo, Madagascar</li>
-                                        <li><span class="bi bi-phone"></span> +261 34 64 888 73</li>
-                                        <li><span class="bi bi-envelope"></span> contact@hasina-ravonimbola.com </li>
-                                    </ul>
-                                </div>
-                                <div class="socials">
-                                    <ul>
-                                        {#                                            <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>#}
-                                        <li><a href="https://www.linkedin.com/in/hasina-ravonimbola/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        <div class="relative grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="font-headline-lg text-headline-lg text-white mb-6 uppercase tracking-tight">Prêt à lancer votre <br/><span class="text-sky-500">prochain projet ?</span></h2>
+                <p class="font-body-lg text-body-lg text-slate-400 mb-8">Discutons de vos besoins techniques et de la manière dont nous pouvons construire ensemble des solutions performantes.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-white">
+                        <span class="material-symbols-outlined text-sky-500">mail</span>
+                        <span class="font-body-md">contact@hasina-ravonimbola.com</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-white">
+                        <span class="material-symbols-outlined text-sky-500">call</span>
+                        <span class="font-body-md">+261 34 64 888 73</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-white">
+                        <span class="material-symbols-outlined text-sky-500">location_on</span>
+                        <span class="font-body-md">Antananarivo, Madagascar</span>
                     </div>
                 </div>
+                <div class="mt-8">
+                    <a href="https://www.linkedin.com/in/hasina-ravonimbola/" target="_blank" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 transition-colors">
+                        <i class="bi bi-linkedin text-2xl"></i>
+                        <span class="font-label-md">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                {{ form_start(contactform, {'attr': {'id': 'formContact', 'class': 'space-y-4'}}) }}
+                    <div class="form-group">
+                        {{ form_widget(contactform.nom, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Nom complet'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(contactform.email, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Email'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(contactform.sujet, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Sujet'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(contactform.message, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Votre message', 'rows': '4'}}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(contactform.captcha) }}
+                        {{ form_errors(contactform.captcha) }}
+                    </div>
+                {{ form_end(contactform) }}
             </div>
         </div>
     </div>

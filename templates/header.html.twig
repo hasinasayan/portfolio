@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Web Developper | Hasina Ravonimbola</title>
+    <title>Hasina Ravonimbola | Full-Stack Developer</title>
     <meta content="Hasina RAVONIMBOLA-Web developper:PHP,WordPress,Symfony,Drupal,Webmaster. Ecouter et donner une solution au demande du client" name="description">
     <meta content="Hasina RAVONIMBOLA,Web developper,PHP,WordPress,Symfony,Drupal, Webmaster" name="keywords">
 
@@ -12,22 +12,120 @@
     <link href="{{ asset('assets/img/Web-developper-Hasina-Ravonimbola-favicon-32x32.png') }}" sizes="32x32" rel="icon">
     <link href="{{ asset('assets/img/Web-developper-Hasina-Ravonimbola-apple-touch-icon.png') }}" sizes="180x180" rel="apple-touch-icon">
 
-    <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files (kept for compatibility) -->
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001e2f",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#1c2b3c",
+                        "primary-fixed": "#c9e6ff",
+                        "background": "#051424",
+                        "tertiary": "#b9c7e0",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "inverse-on-surface": "#233143",
+                        "on-tertiary": "#233144",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#adb4ce",
+                        "on-primary": "#00344d",
+                        "error-container": "#93000a",
+                        "on-surface": "#d4e4fa",
+                        "secondary": "#bec6e0",
+                        "inverse-surface": "#d4e4fa",
+                        "tertiary-fixed": "#d5e3fd",
+                        "on-surface-variant": "#bec8d2",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#0d1c2d",
+                        "surface-tint": "#89ceff",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "outline": "#88929b",
+                        "on-primary-container": "#003751",
+                        "surface": "#051424",
+                        "surface-bright": "#2c3a4c",
+                        "on-tertiary-container": "#263447",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-background": "#d4e4fa",
+                        "on-secondary": "#283044",
+                        "surface-dim": "#051424",
+                        "secondary-fixed": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "surface-container-lowest": "#010f1f",
+                        "tertiary-container": "#8e9cb4",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#89ceff",
+                        "surface-variant": "#273647",
+                        "inverse-primary": "#006591",
+                        "surface-container-highest": "#273647",
+                        "secondary-container": "#3f465c",
+                        "primary": "#89ceff",
+                        "surface-container": "#122131",
+                        "primary-container": "#0ea5e9",
+                        "outline-variant": "#3e4850"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "margin-page": "40px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "label-sm": ["Space Grotesk"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Space Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="{{ asset('assets/css/v2-custom.css') }}" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3R27914ZHJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-3R27914ZHJ');
     </script>
 </head>
-<body>
+<body class="dark cyber-grid">

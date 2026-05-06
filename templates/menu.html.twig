@@ -1,21 +1,33 @@
-{# templates/header.html.twig #}
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-        <h1 class="logo"><a href="">Hasina Ravonimbola</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto" href="#about">About</a></li>
-                <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                <li><a class="nav-link scrollto " href="#work">Work</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
+{# templates/menu.html.twig #}
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-900/50 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-sky-500/10">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+        <div class="text-xl font-bold tracking-tighter text-white uppercase font-['Inter'] animate-glow-pulse">HASINA RAVONIMBOLA</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-sky-400 border-b-2 border-sky-500 pb-1 font-['Inter'] tracking-tight" href="#about">Accueil</a>
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#work">Projets</a>
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#services">Services</a>
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#contact">Contact</a>
+            <a href="{{ asset('assets/img/test_pdf.pdf') }}" target="_blank" class="ml-4 px-6 py-2 bg-primary-container text-white rounded-full font-label-md text-label-md hover:scale-105 active:scale-95 transition-all cursor-pointer">Mon CV</a>
+        </div>
+        <div class="md:hidden">
+            <span class="material-symbols-outlined text-white cursor-pointer" id="mobile-menu-toggle">menu</span>
+        </div>
     </div>
-</header><!-- End Header -->
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10" id="mobile-menu">
+        <div class="px-8 py-4 space-y-4">
+            <a class="block text-sky-400 font-['Inter'] tracking-tight" href="#about">Accueil</a>
+            <a class="block text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#work">Projets</a>
+            <a class="block text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#services">Services</a>
+            <a class="block text-slate-400 hover:text-white transition-colors font-['Inter'] tracking-tight" href="#contact">Contact</a>
+            <a href="{{ asset('assets/img/test_pdf.pdf') }}" target="_blank" class="w-full px-6 py-2 bg-primary-container text-white rounded-full font-label-md text-label-md">Mon CV</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.getElementById('mobile-menu-toggle')?.addEventListener('click', function() {
+        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+</script>

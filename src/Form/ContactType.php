@@ -39,8 +39,8 @@ class ContactType extends AbstractType
             ])
             ->add('captcha', ReCaptchaType::class)
             ->add('save', SubmitType::class, [
-                'label' => 'Send',
-                'attr' => ['class' => 'button button-a button-big button-rouded']
+                'label' => 'Envoyer le message',
+                'attr' => ['class' => 'w-full py-4 bg-primary-container text-white font-label-md text-label-md rounded-lg glow-border uppercase tracking-widest hover:bg-sky-600 transition-all']
                 ])
         ;
     }

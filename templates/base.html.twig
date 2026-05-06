@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="fr">
 
 {% block header %}
     {% include 'header.html.twig' %}
@@ -9,90 +9,54 @@
     {% include 'menu.html.twig' %}
 {% endblock %}
 
-<main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="box-shadow-full">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-5">
-                                        <div class="about-img">
-                                            <picture>
-                                                <source srcset="{{ 'assets/img/Hasina-ravonimbola-web-developper_q90.webp'}}" type="image/webp">
-                                                <source srcset="assets/img/Hasina-ravonimbola-web-developper.jpg" type="image/jpeg">
-                                                <img src="assets/img/Hasina-ravonimbola-web-developper.jpg" class="img-fluid rounded b-shadow-a" alt="Hasina-ravonimbola-web-developper-porftolio" title="Hasina-ravonimbola-web-developper">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-7">
-                                        <div class="about-info">
-                                            <p><span class="title-s">Name: </span> <span>Hasina RAVONIMBOLA</span></p>
-                                            <p><span class="title-s">Profile: </span> <span>Web Developer</span></p>
-                                            <p><span class="title-s">Email: </span> <span>contact@hasina-ravonimbola.com</span></p>
-                                            <p><span class="title-s">Phone: </span> <span>+261 34 64 888 73</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% block skills %}
-                                    {% include 'skills.html.twig' %}
-                                {% endblock%}
-                            </div>
-                            <div class="col-md-6">
-                                <div class="about-me pt-4 pt-md-0">
-                                    <div class="title-box-2">
-                                        <h5 class="title-left">
-                                            About me
-                                        </h5>
-                                    </div>
-                                    <p class="lead">
-                                        As a web developer with 6 years experience, my watchwords have always
-                                        been rigour and adaptation to achieve project objectives.</p>
-                                    <p class="lead">
-                                        Team management and technical design are skills I've acquired through my
-                                        experience on a number of projects.
-                                    </p>
-                                    <p class="lead">
-                                        Tools : Git</br>
-                                        Environnement : Windows, Docker </br>
-                                        Methode : Agile </br>
-
-
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<main class="pt-32">
+    <!-- Hero Section -->
+    <section id="about" class="max-w-7xl mx-auto px-8 mb-section-gap flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+            <div class="inline-block px-4 py-1 glass-card rounded-full text-sky-400 font-label-md text-label-md border-sky-500/30">
+                9+ YEARS EXPERIENCE
+            </div>
+            <h1 class="font-headline-xl text-headline-xl text-white tracking-tighter uppercase leading-none">
+                Hasina <br/> <span class="text-sky-500 text-glow animate-glow-pulse">Ravonimbola</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-slate-400 max-w-xl">
+                Développeur Full-Stack expert dans la conception d'architectures robustes et d'interfaces utilisateur immersives. Passionné par la performance et l'innovation logicielle.
+            </p>
+            <div class="flex gap-4 pt-4">
+                <a class="btn-cyber px-8 py-4 bg-primary-container text-white font-label-md text-label-md rounded-lg glow-border transition-all" href="#work">VOIR MES PROJETS</a>
+                <a class="btn-cyber px-8 py-4 border border-white/10 glass-card text-white font-label-md text-label-md rounded-lg hover:bg-white/5 transition-all" href="#contact">ME CONTACTER</a>
             </div>
         </div>
-    </section><!-- End About Section -->
+        <div class="relative w-full max-w-md aspect-[3/4]">
+            <div class="absolute inset-0 bg-sky-500/20 blur-[100px] rounded-full"></div>
+            <div class="relative w-full h-full glass-card rounded-2xl overflow-hidden border-sky-500/20 p-2">
+                <picture>
+                    <source srcset="{{ asset('assets/img/Portrait_Team_Hasina.jpg') }}" type="image/jpeg">
+                    <img src="{{ asset('assets/img/Portrait_Team_Hasina.jpg') }}" alt="Hasina Ravonimbola Profile" class="w-full h-full object-cover rounded-xl" title="Hasina Ravonimbola - Full-Stack Developer">
+                </picture>
+            </div>
+        </div>
+    </section>
 
+    <!-- ======= Skills Section ======= -->
+    {% block skills %}
+        {% include 'skills.html.twig' %}
+    {% endblock %}
 
     <!-- ======= Services Section ======= -->
     {% block services %}
         {% include 'services.html.twig' %}
     {% endblock %}
 
-    <!-- ======= Counter Section ======= -->
-    {% block counter %}
-        {% include 'counter.html.twig' %}
-    {% endblock %}
-
+    <!-- ======= Portfolio Section ======= -->
     {% block portfolio %}
         {% include 'potfolio.html.twig' %}
     {% endblock %}
-
 
     <!-- ======= Contact Section ======= -->
     {% block contact %}
         {% include 'contact.html.twig' %}
     {% endblock %}
-
-</main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
 {% block footer %}
