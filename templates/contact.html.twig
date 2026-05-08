@@ -5,16 +5,16 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 blur-[100px]"></div>
         
         <!-- Toast Messages -->
-        <div class="toast ok-send hidden relative z-10 mb-8 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400" role="alert">
+        <div class="toast ok-send hidden relative z-10 mb-8 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400" role="alert" style="display: none;">
             <div class="flex items-center gap-3">
-                <i class="bi bi-bell text-2xl"></i>
-                <span class="font-body-md">Your message has been sent. Thank you!</span>
+                <span class="material-symbols-outlined text-2xl">check_circle</span>
+                <span class="font-body-md">Votre message a été envoyé avec succès !</span>
             </div>
         </div>
-        <div class="toast not-send hidden relative z-10 mb-8 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400" role="alert">
+        <div class="toast not-send hidden relative z-10 mb-8 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400" role="alert" style="display: none;">
             <div class="flex items-center gap-3">
-                <i class="bi bi-bell text-2xl"></i>
-                <span class="font-body-md">Your message can't be sent, please try again!</span>
+                <span class="material-symbols-outlined text-2xl">error</span>
+                <span class="font-body-md toast-body">Votre message n'a pas pu être envoyé. Veuillez réessayer !</span>
             </div>
         </div>
 
@@ -47,22 +47,25 @@
             <div class="space-y-4">
                 {{ form_start(contactform, {'attr': {'id': 'formContact', 'class': 'space-y-4'}}) }}
                     <div class="form-group">
-                        {{ form_widget(contactform.nom, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Nom complet'}}) }}
+                        {{ form_widget(contactform.nom)}}
                     </div>
                     <div class="form-group">
-                        {{ form_widget(contactform.email, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Email'}}) }}
+                        {{ form_widget(contactform.email) }}
                     </div>
                     <div class="form-group">
-                        {{ form_widget(contactform.sujet, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Sujet'}}) }}
+                        {{ form_widget(contactform.sujet) }}
                     </div>
                     <div class="form-group">
-                        {{ form_widget(contactform.message, {'attr': {'class': 'w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-sky-500 focus:ring-0 transition-all outline-none', 'placeholder': 'Votre message', 'rows': '4'}}) }}
+                        {{ form_widget(contactform.message) }}
                     </div>
                     <div class="form-group">
                         {{ form_row(contactform.captcha) }}
                         {{ form_errors(contactform.captcha) }}
                     </div>
-                {{ form_end(contactform) }}
+                    <div class="form-group">
+                        {{ form_widget(contactform.save) }}
+                    </div>
+                {{ form_end(contactform, {'render_rest': false}) }}
             </div>
         </div>
     </div>

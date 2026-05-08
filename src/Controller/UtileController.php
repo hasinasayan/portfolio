@@ -47,21 +47,16 @@ class UtileController extends AbstractController
                         ->subject($data['sujet'])
                         ->text($data['message']);
                     $mailer->send($mailContent);
-                } catch (\Exception $e) {
-                    $form->addError(new FormError($e->getMessage()));
-                    $logger->error('error form:' . $form->getErrors());
-                }
-                if (count($form->getErrors(true)) == 0) {
                     return $this->json([
                         'success' => true,
-                        'message' => 'Your message has been sent. Thank you!'
+                        'message' => 'Votre message a été envoyé avec succès !'
                     ]);
-                } else {
+                } catch (\Exception $e) {
+                    $logger->error('Erreur envoi email: ' . $e->getMessage());
                     return $this->json([
                         'success' => false,
-                        'message' => 'Your message can\'t be send, please try again!'
+                        'message' => 'Erreur lors de l\'envoi du message. Veuillez réessayer.'
                     ]);
-
                 }
             }
 
